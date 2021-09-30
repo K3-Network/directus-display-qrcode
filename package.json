@@ -4,13 +4,15 @@
   "description": "A Display that shows a QR-Code representation of a String when hovering the String.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx directus-extension build && mv dist/index.js ./index.js"
   },
   "keywords": [],
   "author": "K3.Network",
   "license": "ISC",
   "devDependencies": {
-    "@directus/extension-sdk": "^9.0.0-rc.90"
+    "@directus/extension-sdk": "^9.0.0-rc.90",
+    "sass": "^1.42.1"
   },
   "directus:extension": {
     "type": "display",
