@@ -38,6 +38,7 @@ To display the QR-Code on the Collection Editing Page, check out [directus-inter
 
 * [Vue](https://github.com/vuejs/vue)
 * [qrcode.vue](https://github.com/scopewu/qrcode.vue)
+* [SASS](https://github.com/sass/sass)
 
 
 
