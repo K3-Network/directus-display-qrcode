@@ -23,36 +23,35 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-This is a simple [Directus 9](https://directus.io/) Display Extension, which allows to display QR-Codes directly inside of the Directus UI.
-It takes a String input and renders a QR-Code when hovering over the String Value in the Collection overview.
+This is a simple [Directus 9](https://directus.io/) Display Extension, which allows to display and download QR-Codes directly inside of the Directus UI.
+It takes a String input and renders a QR-Code when clicking on the String Value in the Collection overview. It opens a Modal when clicking on the Popup which gives you more Options as to download the QR-Code.
 
-To display the QR-Code on the Collection Editing Page, check out [directus-interface-qrcode](https://github.com/K3-Network/directus-interface-qrcode).
-
+To display and scan QR-Codes on the Collection Editing Page, check out [directus-interface-qrcode](https://github.com/K3-Network/directus-interface-qrcode).
 
 ### Built With
 
-* [Vue](https://github.com/vuejs/vue)
-* [qrcode.vue](https://github.com/scopewu/qrcode.vue)
-* [SASS](https://github.com/sass/sass)
-
-
+- [Vue](https://github.com/vuejs/vue)
+- [qrcode.vue](https://github.com/scopewu/qrcode.vue)
+- [SASS](https://github.com/sass/sass)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 There are 2 ways to get up and running. Either you compile the Extension yourself, or you download the precompiled Extension:
 
 ### Compile it yourself
 
-1. Clone the repo 
-  ```sh
-   git clone https://github.com/K3-Network/directus-display-qrcode.git
-   ```
+1. Clone the repo
+
+```sh
+ git clone https://github.com/K3-Network/directus-display-qrcode.git
+```
+
 2. Install NPM packages
    ```sh
    npm install
@@ -68,28 +67,24 @@ There are 2 ways to get up and running. Either you compile the Extension yoursel
 ### Install the precompiled Extension
 
 1. Download the [Binaries](https://github.com/K3-Network/directus-display-qrcode/releases/latest/download/directus-display-qrcode.zip)
-   
 2. Extract the ZIP into `Your-Directus-Installation\extensions\displays\`
 
 3. Restart Directus
 
-
-
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/K3-Network/directus-display-qrcode/issues) for a list of proposed features (and known issues).
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the ISC License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 [Nicolas Mierbach](https://github.com/nico-k3) - K3.Network
