@@ -1,7 +1,7 @@
 {
   "name": "directus-display-qrcode",
   "version": "1.0.0",
-  "description": "A Display that shows a QR-Code representation of a String when hovering the String.",
+  "description": "A Display that shows a QR-Code representation of a String when clicking on the String.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
