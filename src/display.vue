@@ -30,7 +30,7 @@
       </div>
     </v-menu>
     <v-overlay class="overlay" @click.stop="overlay = false" :active="overlay">
-      <v-card>
+      <v-card @click.stop>
         <v-card-title>QR-Code</v-card-title>
         <v-card-subtitle>{{ value }}</v-card-subtitle>
         <qrcode-vue
