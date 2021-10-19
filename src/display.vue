@@ -10,7 +10,14 @@
       <template #activator="{ toggle }">
         <span class="toggle" @click.stop="toggle">
           <span class="label">
-            <v-icon class="icon" name="qr_code_scanner" small /> {{ value }}
+            <span v-if="showIcon">
+              <v-icon
+                class="icon"
+                name="qr_code_scanner"
+                v-bind="computedIconSize"
+              />
+            </span>
+            {{ value }}
           </span>
         </span>
       </template>
@@ -24,12 +31,17 @@
           :size="120"
           level="H"
         />
-        <div class="maximize">
+        <div v-if="showModal" class="maximize">
           <v-icon name="launch" />
         </div>
       </div>
     </v-menu>
-    <v-overlay class="overlay" @click.stop="overlay = false" :active="overlay">
+    <v-overlay
+      v-if="showModal"
+      class="overlay"
+      @click.stop="overlay = false"
+      :active="overlay && showModal"
+    >
       <v-card @click.stop>
         <v-card-title>QR-Code</v-card-title>
         <v-card-subtitle>{{ value }}</v-card-subtitle>
@@ -56,12 +68,32 @@
 <script>
 import QrcodeVue from "qrcode.vue";
 
+const validSizes = ["small", "medium", "big"];
+
 export default {
-  props: {
-    value: String,
-  },
   components: {
     QrcodeVue,
+  },
+  props: {
+    value: {
+      type: String,
+      default: null,
+    },
+    showIcon: {
+      type: Boolean,
+      default: true,
+    },
+    iconSize: {
+      type: String,
+      default: "small",
+      validator(prop) {
+        return validSizes.contains(prop);
+      },
+    },
+    showModal: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
@@ -88,6 +120,15 @@ export default {
         elem.click();
         document.body.removeChild(elem);
       }
+    },
+  },
+  computed: {
+    computedIconSize() {
+      const propName = this.iconSize;
+      const props = {};
+      props[propName] = true;
+
+      return props;
     },
   },
 };
