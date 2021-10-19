@@ -12,6 +12,7 @@
         class="qr"
         :value="value"
         background="rgba(0,0,0,0)"
+        foreground="var(--qr-display-color)"
         render-as="svg"
         :size="120"
         level="H"
@@ -43,6 +44,16 @@ export default {
 };
 </script>
 
+<style>
+body {
+  --qr-display-color: rgb(0, 0, 0);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --qr-display-color: rgb(255, 255, 255);
+  }
+}
+</style>
 <style lang="scss" scoped>
 .v-icon {
   --v-icon-color: var(--foreground-subdued);
